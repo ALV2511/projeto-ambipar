@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <nav>
+                <h1 class="titulo">ambipar</h1>
+                <ul>
+                    <li><a href="index.html" class="cabecalho">Home</a></li>
+                    <li><a href="sobre.html" class="cabecalho">Sobre</a></li>
+                    <li><a href="contato.html" class="cabecalho">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cadastro-main">
+        <h1 class="titulo-secao">Crie sua conta</h1>
+        <p class="cadastro-introducao">Preencha seus dados para realizar o cadastro.</p>
+
+        <section class="formulario-cadastro">
+            <form action="cadastro.php" method="POST">
+                <div class="campo-cadastro">
+                    <label for="username">Nome de usuário</label>
+                    <input type="text" id="username" name="username" autocomplete="username" required>
+                </div>
+
+                <div class="campo-cadastro">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="campo-cadastro">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" autocomplete="new-password" required>
+                </div>
+
+                <button class="botao" type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ambipar. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
