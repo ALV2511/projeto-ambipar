@@ -1,4 +1,5 @@
-# Ignorar dados sensíveis com credenciais e senhas
+# não mexe nesta porra de arquivo se não vai foder ao quadrado o arquivo
+#arquivo com info sensivel
 .env
 
 # Ignorar cópias de segurança e ficheiros de base de dados locais
