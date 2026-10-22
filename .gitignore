@@ -1,0 +1,11 @@
+# Ignorar dados sensíveis com credenciais e senhas
+.env
+
+# Ignorar cópias de segurança e ficheiros de base de dados locais
+/archive/
+*.zip
+*.sql
+
+# Ignorar pastas de sistema do SO ou do IDE
+.vscode/
+.ds_store

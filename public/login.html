@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | Ambipar</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/form-feedback.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <nav aria-label="Navegação principal">
+                <a href="index.html" class="titulo">ambipar</a>
+                <ul>
+                    <li><a href="index.html" class="cabecalho">Home</a></li>
+                    <li><a href="sobre.html" class="cabecalho">Sobre</a></li>
+                    <li><a href="contato.html" class="cabecalho">Contato</a></li>
+                </ul>
+                <div class="botoes-acao">
+                    <a href="login.html" class="btn btn-entrar">Entrar</a>
+                    <a href="cadastro.html" class="btn btn-cadastrar">Cadastrar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="cadastro-main">
+        <h1 class="titulo-secao">Entrar na sua conta</h1>
+        <p class="cadastro-introducao">Informe seu e-mail e sua senha.</p>
+        <p class="form-feedback" data-form-feedback role="alert" aria-live="polite" hidden></p>
+        <section class="formulario-cadastro">
+            <form action="api/login_usuarios.php" method="post">
+                <div class="campo-cadastro">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="username" maxlength="254" required>
+                </div>
+                <div class="campo-cadastro">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" maxlength="4096" required>
+                </div>
+                <button class="botao" type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Ambipar. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

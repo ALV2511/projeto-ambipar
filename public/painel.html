@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Meu painel | Ambipar</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/painel.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <nav aria-label="Navegação principal">
+                <a class="titulo" href="index.html">ambipar</a>
+                <ul>
+                    <li><a href="index.html" class="cabecalho">Home</a></li>
+                    <li><a href="sobre.html" class="cabecalho">Sobre</a></li>
+                    <li><a href="contato.html" class="cabecalho">Contato</a></li>
+                </ul>
+                <form action="sair.php" method="post">
+                    <button class="btn btn-sair" type="submit">Sair</button>
+                </form>
+            </nav>
+        </div>
+    </header>
+    <main class="painel-main" data-painel hidden>
+        <section class="painel-boas-vindas">
+            <div>
+                <p class="painel-sobretitulo">SEU ESPAÇO AMBIPAR</p>
+                <h1>Olá, <span data-usuario-nome></span>!</h1>
+                <p class="painel-email" data-usuario-email></p>
+            </div>
+            <div class="nivel-selo" aria-label="Nível atual">
+                <span class="nivel-selo-icone" aria-hidden="true">✦</span>
+                <span>Nível <strong data-nivel-numero></strong></span>
+                <strong data-nivel-nome></strong>
+            </div>
+        </section>
+
+        <section class="painel-nivel" aria-labelledby="titulo-progresso">
+            <div class="painel-secao-cabecalho">
+                <div>
+                    <p class="painel-sobretitulo">SUA JORNADA</p>
+                    <h2 id="titulo-progresso">Progresso de nível</h2>
+                </div>
+                <p class="painel-xp"><strong data-xp-atual></strong> XP</p>
+            </div>
+            <div class="progresso-trilho"
+                 role="progressbar"
+                 aria-label="Progresso para o próximo nível"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-valuenow="0"
+                 data-progresso>
+                <span class="progresso-preenchimento" data-progresso-preenchimento></span>
+            </div>
+            <p class="progresso-legenda" data-progresso-legenda></p>
+            <p class="painel-nota">Você ganha 20 XP ao criar sua conta e 10 XP por dia diferente em que entrar.</p>
+        </section>
+
+        <section class="painel-estatisticas" aria-label="Suas estatísticas">
+            <article class="estatistica-card">
+                <span class="estatistica-icone" aria-hidden="true">✦</span>
+                <p class="estatistica-valor" data-estatistica-xp></p>
+                <h2>Experiência</h2>
+                <p>pontos acumulados</p>
+            </article>
+            <article class="estatistica-card">
+                <span class="estatistica-icone" aria-hidden="true">▦</span>
+                <p class="estatistica-valor" data-estatistica-acessos></p>
+                <h2>Dias ativos</h2>
+                <p>dias diferentes com acesso</p>
+            </article>
+            <article class="estatistica-card">
+                <span class="estatistica-icone" aria-hidden="true">★</span>
+                <p class="estatistica-valor" data-estatistica-insignias></p>
+                <h2>Insígnias</h2>
+                <p>conquistas desbloqueadas</p>
+            </article>
+        </section>
+
+        <section class="painel-insignias" aria-labelledby="titulo-insignias">
+            <div class="painel-secao-cabecalho">
+                <div>
+                    <p class="painel-sobretitulo">CONQUISTAS</p>
+                    <h2 id="titulo-insignias">Suas insígnias</h2>
+                </div>
+                <p class="painel-nota" data-insignias-resumo></p>
+            </div>
+            <div class="insignias-lista" data-insignias-lista></div>
+        </section>
+
+        <section class="painel-atalhos" aria-labelledby="titulo-atalhos">
+            <h2 id="titulo-atalhos">Continue explorando</h2>
+            <a class="botao botao-secundario" href="sobre.html">Conheça a Ambipar</a>
+            <a class="botao" href="index.html#solucoes">Ver nossas soluções</a>
+        </section>
+    </main>
+    <p class="painel-feedback" data-painel-feedback role="alert" aria-live="polite" hidden></p>
+    <footer>
+        <p>&copy; 2026 Ambipar. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

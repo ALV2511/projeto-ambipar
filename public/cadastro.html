@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Ambipar</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/form-feedback.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <nav aria-label="Navegação principal">
+                <a href="index.html" class="titulo">ambipar</a>
+                <ul>
+                    <li><a href="index.html" class="cabecalho">Home</a></li>
+                    <li><a href="sobre.html" class="cabecalho">Sobre</a></li>
+                    <li><a href="contato.html" class="cabecalho">Contato</a></li>
+                </ul>
+                <div class="botoes-acao">
+                    <a href="login.html" class="btn btn-entrar">Entrar</a>
+                    <a href="cadastro.html" class="btn btn-cadastrar">Cadastrar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="cadastro-main">
+        <h1 class="titulo-secao">Crie sua conta</h1>
+        <p class="cadastro-introducao">Preencha seus dados para realizar o cadastro.</p>
+        <p class="form-feedback" data-form-feedback role="alert" aria-live="polite" hidden></p>
+        <section class="formulario-cadastro">
+            <form action="api/cadastro_usuarios.php" method="post">
+                <div class="campo-cadastro">
+                    <label for="username">Nome de usuário</label>
+                    <input type="text" id="username" name="username" autocomplete="username" maxlength="100" required>
+                </div>
+                <div class="campo-cadastro">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
+                </div>
+                <div class="campo-cadastro">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" autocomplete="new-password" maxlength="4096" required>
+                </div>
+                <button class="botao" type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Ambipar. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
